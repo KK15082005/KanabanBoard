@@ -1,0 +1,72 @@
+.task-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    width: 105%;
+    box-sizing: border-box;
+}
+
+.task-card h5 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.task-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.task-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.task-date {
+    white-space: nowrap;
+}
+
+.task-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.task-edit,
+.task-delete {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-edit {
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.task-delete {
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+.task-edit:hover {
+    background: #eaf2ff;
+    color: #0d6efd;
+}
+
+.task-delete:hover {
+    background: #fff0f0;
+    color: #dc3545;
+}

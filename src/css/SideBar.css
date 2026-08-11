@@ -1,0 +1,53 @@
+.sidebar{
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #eee;
+    padding: 25px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.menu{
+    gap:10px
+}
+.menu li{
+    list-style: none;
+    padding: 14px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.menu li i{
+    margin-right: 10px;
+}
+
+.menu .active{
+    background: #eef2ff;
+    color: #365cf5;
+    font-weight: 600;
+}
+
+.stats{
+    margin-top: auto;
+    padding: 18px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+}
+
+.stats h2{
+    color: #365cf5;
+    font-weight: bold;
+}
+
+@media(max-width:992px){
+
+.sidebar{
+
+position:relative;
+width:100%;
+height:auto;
+
+}
+
+}
