@@ -1,16 +1,50 @@
-# React + Vite
+Kanban Board  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean Kanban Board built with React to organize tasks and keep track of work in a visual and easy-to-use way.
 
-Currently, two official plugins are available:
+I built this project to practice React and improve my understanding of components, props, state management, and building reusable UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features
+ 
+Create and manage tasks
+Organize tasks into different columns
+Add tasks
+Delete tasks
+Edit Task
+Drag and Drop Task
+Clean and responsive UI
+Reusable React components
+Simple task management experience
+ 
+Tech Stack
 
-## React Compiler
+React.js
+JavaScript
+HTML5
+CSS3
+Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+What I Learned
 
-## Expanding the ESLint configuration
+While building this project, I got hands-on experience with:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+•Creating reusable React components
+•Managing state in React
+•Passing data using props
+•Drag and Drop Functionality 
+•Editing Deleting and Sorting
+•Dynamic Numbering
+•Handling user interactions
+•Structuring a React project
+•Building a responsive UI
+•Using Git and GitHub for version control
+
+Future Improvements
+
+I would like to add more features in the future, such as:
+ 
+User authentication
+Backend and database integration
+Persistent task storage
+Filtration and Searching
+
