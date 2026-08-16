@@ -2,7 +2,7 @@ import React from "react";
 import "../css/TaskColumn.css";
 import TaskCard from "./TaskCard";
 
-function TaskColumn({ tasks , deleteTask , editTask , moveTask}) {
+function TaskColumn({ tasks , deleteTask , editTask , moveTask }) {
 
     return (
         <div className="task-container mt-4">

@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import TaskColumn from './TaskColumn';
 import TaskCard from './TaskCard';
 import TaskForm from './TaskForm';
-function Navbar({tasks , addTask , deleteTask , editTask , moveTask , search , setSearch}) {
+function Navbar({tasks , addTask , deleteTask , editTask , moveTask , search , setSearch , priority , setPriority , sort , setSort }) {
     return ( 
         
         <div className='content'> 
@@ -15,7 +15,7 @@ function Navbar({tasks , addTask , deleteTask , editTask , moveTask , search , s
                 </div>
                 <button type="button" className="btn btn-primary px-4 py-2 mb-2" data-bs-toggle="modal" data-bs-target="#taskModal"> <i className="bi bi-plus-circle me-2"></i> New Task</button>
             </div>   
-            <SearchBar search = {search} setSearch = {setSearch}/>
+            <SearchBar search = {search} setSearch = {setSearch} priority = {priority} setPriority = {setPriority} sort = {sort} setSort = {setSort}/>
             <TaskColumn tasks={tasks} deleteTask={deleteTask} editTask={editTask} moveTask={moveTask}/>
             <div className="modal fade" id="taskModal" tabIndex="-1">
                 <div className="modal-dialog">

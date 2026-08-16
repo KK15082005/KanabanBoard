@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 function Dashboard() {
 
     const [tasks, setTasks] = useState([]);
-
+    const[priority , setPriority] = useState("All");
     const[search , setSearch] = useState("");
-    const[filter , setFilter ] = useState("All ");
+    
     const[sort , setSort] = useState("Newest");
 
     // Add Task
@@ -48,10 +48,31 @@ function Dashboard() {
             )
         );
     }
-    let filteredTasks =tasks;
+    let filteredTasks =[...tasks];
     filteredTasks = filteredTasks.filter((task) =>
         task.title.toLowerCase().includes(search.toLowerCase())
+        ).filter((task) => 
+        priority ==="All" ? true : task.priority === priority
     );
+    if (sort === "Newest") {
+        filteredTasks.sort((a, b) => b.id - a.id);
+    }
+
+    if (sort === "Oldest") {
+        filteredTasks.sort((a, b) => a.id - b.id);
+    }
+
+    if (sort === "Highest") {
+        const order = {
+            High: 3,
+            Medium: 2,
+            Low: 1
+        };
+
+        filteredTasks.sort(
+            (a, b) => order[b.priority] - order[a.priority]
+        );
+    }
     return (
         <>
             <SideBar tasks={tasks} />
@@ -64,6 +85,10 @@ function Dashboard() {
                 moveTask={moveTask}
                 search = {search}
                 setSearch = {setSearch}
+                sort = {sort}
+                setSort = {setSort}
+                priority = {priority}
+                setPriority = {setPriority}
             />
         </>
     );

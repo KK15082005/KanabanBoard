@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBar({ search, setSearch }) {
+function SearchBar({ search, setSearch ,  priority , setPriority , sort , setSort}) {
     return (
         <div className='searchbar'>
             <div className='row g-3 '>
@@ -13,22 +13,20 @@ function SearchBar({ search, setSearch }) {
                 </div>
 
                 <div className='col-12 col-md-4'>
-                    <select className="form-select" aria-label="Default select example" placeholder="filter : All Tasks">
-                        <option value="1">High Priority</option>
-                        <option value="2">Medium Priority</option>
-                        <option value="3">Low Priority</option>
-                        <option value="3">Due Today</option>
-                        <option value="3">Completed</option>
+                    <select className="form-select" aria-label="Priority filter" value={priority} onChange={(e)=>setPriority(e.target.value)}>
+                        <option value="All">All Tasks</option>
+                        <option value="High">High Priority</option>
+                        <option value="Medium">Medium Priority</option>
+                        <option value="Low">Low Priority</option>
                     </select>
                     
                 </div>
 
                 <div className='col-12 col-md-4'>
-                    <select className="form-select" aria-label="Default select example" placeholder="sort : Newest">
-                        <option >Newest</option>
-                        <option value="1">Oldest</option>
-                        <option value="2">Highest priotity</option>
-                        <option value="3">Due Date</option>
+                    <select className="form-select" aria-label="Sort options" value={sort} onChange={(e)=>setSort(e.target.value)}>
+                        <option value="Newest">Newest</option>
+                        <option value="Oldest">Oldest</option>
+                        <option value="Highest">Highest Priority</option>
                     </select>
                 </div>
             </div>
