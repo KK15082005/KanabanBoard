@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SideBar from "../components/SideBar";
 import Navbar from "../components/Navbar";
 
@@ -9,6 +9,27 @@ function Dashboard() {
     const[search , setSearch] = useState("");
     
     const[sort , setSort] = useState("Newest");
+
+    // Load tasks from localStorage on mount
+    useEffect(() => {
+        const savedTasks = localStorage.getItem("kanban_tasks");
+        console.log("Loading tasks from localStorage:", savedTasks);
+        if (savedTasks) {
+            try {
+                setTasks(JSON.parse(savedTasks));
+            } catch (error) {
+                console.error("Error parsing tasks:", error);
+            }
+        }
+    }, []);
+
+    // Save tasks to localStorage whenever they change
+    useEffect(() => {
+        if (tasks.length > 0) {
+            console.log("Saving tasks to localStorage:", tasks);
+            localStorage.setItem("kanban_tasks", JSON.stringify(tasks));
+        }
+    }, [tasks]);
 
     // Add Task
     const addTask = (newTask) => {
