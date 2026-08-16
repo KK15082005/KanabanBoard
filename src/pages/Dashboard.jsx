@@ -6,6 +6,10 @@ function Dashboard() {
 
     const [tasks, setTasks] = useState([]);
 
+    const[search , setSearch] = useState("");
+    const[filter , setFilter ] = useState("All ");
+    const[sort , setSort] = useState("Newest");
+
     // Add Task
     const addTask = (newTask) => {
         setTasks((prevTasks) => [
@@ -44,17 +48,22 @@ function Dashboard() {
             )
         );
     }
-
+    let filteredTasks =tasks;
+    filteredTasks = filteredTasks.filter((task) =>
+        task.title.toLowerCase().includes(search.toLowerCase())
+    );
     return (
         <>
             <SideBar tasks={tasks} />
 
             <Navbar
-                tasks={tasks}
+                tasks={filteredTasks}
                 addTask={addTask}
                 deleteTask={deleteTask}
                 editTask={editTask}
                 moveTask={moveTask}
+                search = {search}
+                setSearch = {setSearch}
             />
         </>
     );

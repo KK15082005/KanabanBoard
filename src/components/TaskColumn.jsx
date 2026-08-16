@@ -9,7 +9,6 @@ function TaskColumn({ tasks , deleteTask , editTask , moveTask}) {
 
             <div className="row g-4">
 
-                {/* Todo */}
                 <div className="col-12 col-lg-4">
                     <div className="task-box todo" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>{
                         const taskId = e.dataTransfer.getData("taskId");
